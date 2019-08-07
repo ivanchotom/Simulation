@@ -48,7 +48,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 void Game::handleEvents()
 {
 	SDL_Event event;
-	SDL_PollEvent(&event);
+	SDL_PollEvent (&event);
 	switch (event.type)
 	{
 	case SDL_QUIT:
@@ -62,14 +62,15 @@ void Game::handleEvents()
 
 void Game::update()
 {
-
+	cnt++;
+	std::cout << cnt << std::endl;
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
 	SDL_RenderPresent(renderer);
-	//this is where u render
+	
 
 }
 
